@@ -3,7 +3,6 @@
 namespace Components;
 
 use Abstractions\Composition;
-use Abstractions\Glyph;
 use Abstractions\Point;
 use Abstractions\Rect;
 use Abstractions\Window;
@@ -22,6 +21,6 @@ class Character extends Composition
 
     public function Intersects(Point $point): bool
     {
-        return false;
+        return true;
     }
 }

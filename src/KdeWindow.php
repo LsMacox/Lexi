@@ -5,44 +5,38 @@ use Abstractions\Window;
 
 class KdeWindow extends Window
 {
-    protected Event $cursorEvent;
+    protected Event $event;
 
-    public function __construct()
+    public function __construct(event $event)
     {
-        $this->cursorEvent = new CursorEvent();
+        $this->event = $event;
     }
 
     public function getEvent(): Event
     {
-        return $this->cursorEvent;
+        return $this->event;
     }
 
     public function DrawMessage(mixed $mixed): void
     {
-        var_dump($mixed);
+        dump($mixed);
     }
 
     public function DrawRect(...$coordinates): void
     {
-        var_dump('[DRAW RECT]:');
-        $this->fill('red');
+        dump('[DRAW RECT]');
         $this->stroke(new CoordinatesParams(...$coordinates));
     }
 
     public function DrawCharacter(string $character): void
     {
-        var_dump('[DRAW CHARACTER]:' . $character);
-    }
-
-    private function fill(string $color): void
-    {
-        var_dump('[FILL COLOR]:' . $color);
+        dump('[DRAW CHARACTER]: ' . $character);
     }
 
     private function stroke(CoordinatesParams $coordinatesParams): void
     {
-        var_dump(
-            '[STROKE WITH COORDINATES]:' .
+        dump(
+            '[STROKE WITH COORDINATES]: ' .
             $coordinatesParams->get()[0] . ' ' .
             $coordinatesParams->get()[1] . ' ' .
             $coordinatesParams->get()[2] . ' ' .

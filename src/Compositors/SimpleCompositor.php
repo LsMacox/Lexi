@@ -8,6 +8,6 @@ class SimpleCompositor extends Compositor
 {
     public function Compose(): void
     {
-        // TODO: Implement Compose() method.
+        dump('[SIMPLE COMPOSITOR]: COMPOSE');
     }
 }

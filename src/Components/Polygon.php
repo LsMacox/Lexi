@@ -11,6 +11,7 @@ class Polygon extends Glyph
 {
     public function Draw(Window $window): void
     {
+        dump('[DRAW POLYGON]');
         $window->DrawRect(1, 2, 3, 4);
     }
 
@@ -21,6 +22,6 @@ class Polygon extends Glyph
 
     public function Intersects(Point $point): bool
     {
-        return false;
+        return true;
     }
 }

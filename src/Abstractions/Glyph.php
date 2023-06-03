@@ -6,16 +6,16 @@ abstract class Glyph
 {
     protected int $childIdx;
     protected ?Glyph $parent = null;
-    protected array $children = [];
+    public static array $children = [];
 
     abstract public function Draw(Window $window): void;
     abstract public function Bounds(Rect $rect): void;
     abstract public function Intersects(Point $point): bool;
 
-    public function Insert(Glyph $glyph, int $idx = -1): void
+    public function Insert(Glyph $glyph, ?int $idx = null): void
     {
         $glyph->setParent($this);
-        $glyph->setChildIdx($idx !== -1 ? $idx : count($this->children) + 1);
+        $glyph->setChildIdx($idx ?? count(static::$children) + 1);
         $this->addChild($glyph, $idx);
     }
 
@@ -25,7 +25,7 @@ abstract class Glyph
     }
 
     public function Child(int $idx): Glyph {
-        return $this->children[$idx];
+        return static::$children[$idx];
     }
 
     public function Parent(): Glyph {
@@ -47,16 +47,17 @@ abstract class Glyph
         $this->parent = $glyph;
     }
 
-    protected function addChild(Glyph $glyph, ?int $idx = -1): void
+    protected function addChild(Glyph $glyph, ?int $idx): void
     {
-        if ($idx !== -1) {
-            $this->children[] = $glyph;
+        if ($idx) {
+            static::$children[$idx] = $glyph;
+        } else {
+            static::$children[] = $glyph;
         }
-        $this->children[$idx] = $glyph;
     }
 
     protected function removeChild(int $idx): void
     {
-        unset($this->children[$idx]);
+        unset(static::$children[$idx]);
     }
 }

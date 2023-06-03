@@ -13,7 +13,10 @@ class Row extends Glyph
     {
         $pointer = new \CursorPointer($window);
 
-        foreach ($this->children as $child) {
+        dump('[DRAW ROW]');
+
+        /** @var Glyph $child */
+        foreach (static::$children as $child) {
             if ($this->Intersects($pointer)) {
                 $child->Draw($window);
             }
@@ -27,10 +30,13 @@ class Row extends Glyph
 
     public function Intersects(Point $point): bool
     {
-        $check = false;
+        $check = true;
         /* @var Glyph $child */
-        foreach ($this->children as $child) {
-             if (!$child->Intersects($point)) break;
+        foreach (static::$children as $child) {
+             if (!$child->Intersects($point)) {
+                 $check = false;
+                 break;
+             };
         }
         return $check;
     }
