@@ -17,6 +17,11 @@ class KdeWindow extends Window
         return $this->cursorEvent;
     }
 
+    public function DrawMessage(mixed $mixed): void
+    {
+        var_dump($mixed);
+    }
+
     public function DrawRect(...$coordinates): void
     {
         var_dump('[DRAW RECT]:');

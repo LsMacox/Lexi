@@ -1,6 +1,6 @@
 <?php
 
-use Abstractions\Params;
+use Interfaces\Params;
 
 class CoordinatesParams implements Params
 {
