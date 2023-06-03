@@ -1,0 +1,16 @@
+{
+    "name": "lsmacox/pattern-example-lexi",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Lsmacox\\Lexi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "adam.zugiraev",
+            "email": "adam.zugiraev@onlinesup.com"
+        }
+    ],
+    "require": {}
+}
