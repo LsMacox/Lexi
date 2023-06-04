@@ -1,9 +1,9 @@
 <?php
 
-use Abstractions\Point;
-use Abstractions\Window;
+use Interfaces\Point;
+use Interfaces\Window;
 
-class CursorPointer extends Point
+class CursorPointer implements Point
 {
     protected Window $window;
 

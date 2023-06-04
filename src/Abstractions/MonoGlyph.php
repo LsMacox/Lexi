@@ -3,6 +3,9 @@
 namespace Abstractions;
 
 // @pattern Decorator
+use Interfaces\Point;
+use Interfaces\Window;
+
 abstract class MonoGlyph extends Glyph
 {
     protected Glyph $component;

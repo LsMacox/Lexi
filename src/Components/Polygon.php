@@ -3,9 +3,9 @@
 namespace Components;
 
 use Abstractions\Glyph;
-use Abstractions\Point;
 use Abstractions\Rect;
-use Abstractions\Window;
+use Interfaces\Point;
+use Interfaces\Window;
 
 class Polygon extends Glyph
 {

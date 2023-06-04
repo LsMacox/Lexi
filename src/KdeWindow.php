@@ -1,9 +1,9 @@
 <?php
 
-use Abstractions\Event;
-use Abstractions\Window;
+use Interfaces\Event;
+use Interfaces\Window;
 
-class KdeWindow extends Window
+class KdeWindow implements Window
 {
     protected Event $event;
 

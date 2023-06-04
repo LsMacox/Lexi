@@ -3,7 +3,7 @@
 namespace Components\Decorators;
 
 use Abstractions\MonoGlyph;
-use Abstractions\Window;
+use Interfaces\Window;
 
 class ScrollerDecorator extends MonoGlyph
 {

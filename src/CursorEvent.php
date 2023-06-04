@@ -1,8 +1,8 @@
 <?php
 
-use Abstractions\Event;
+use Interfaces\Event;
 
-class CursorEvent extends Event
+class CursorEvent implements Event
 {
     public function getCoordinates(): array
     {

@@ -2,6 +2,9 @@
 
 namespace Abstractions;
 
+use Interfaces\Point;
+use Interfaces\Window;
+
 abstract class Glyph
 {
     protected int $childIdx;
