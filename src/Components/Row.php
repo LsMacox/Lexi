@@ -4,8 +4,8 @@ namespace Components;
 
 use Abstractions\Glyph;
 use Abstractions\Rect;
+use Interfaces\Factory\Window;
 use Interfaces\Point;
-use Interfaces\Window;
 
 class Row extends Glyph
 {

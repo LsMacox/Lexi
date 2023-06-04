@@ -1,7 +1,10 @@
 <?php
 
+namespace Factory\Kde;
+
+use CoordinatesParams;
 use Interfaces\Event;
-use Interfaces\Window;
+use Interfaces\Factory\Window;
 
 class KdeWindow implements Window
 {

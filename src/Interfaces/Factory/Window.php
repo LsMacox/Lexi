@@ -1,6 +1,8 @@
 <?php
 
-namespace Interfaces;
+namespace Interfaces\Factory;
+
+use Interfaces\Event;
 
 interface Window
 {

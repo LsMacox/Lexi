@@ -1,7 +1,7 @@
 <?php
 
+use Interfaces\Factory\Window;
 use Interfaces\Point;
-use Interfaces\Window;
 
 class CursorPointer implements Point
 {
