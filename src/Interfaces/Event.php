@@ -4,5 +4,6 @@ namespace Interfaces;
 
 interface Event
 {
-    public function getCoordinates(): array;
+    public function emit(): void;
+    public function event(): array;
 }

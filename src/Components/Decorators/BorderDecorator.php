@@ -3,7 +3,7 @@
 namespace Components\Decorators;
 
 use Abstractions\MonoGlyph;
-use Interfaces\Factory\Window;
+use Abstractions\Window;
 
 class BorderDecorator extends MonoGlyph
 {
@@ -15,6 +15,6 @@ class BorderDecorator extends MonoGlyph
 
     private function DrawBorder(Window $window): void
     {
-        $window->DrawMessage('[DECORATOR DRAW BORDER]');
+        $window->DrawText('[DECORATOR DRAW BORDER]');
     }
 }

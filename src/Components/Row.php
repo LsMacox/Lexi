@@ -4,16 +4,26 @@ namespace Components;
 
 use Abstractions\Glyph;
 use Abstractions\Rect;
-use Interfaces\Factory\Window;
+use Abstractions\Window;
+use Interfaces\Event;
 use Interfaces\Point;
+use CursorPointer;
+use CursorEvent;
 
 class Row extends Glyph
 {
+    protected Event $cursor_event;
+
+    public function __construct()
+    {
+        $this->cursor_event = new CursorEvent();
+    }
+
     public function Draw(Window $window): void
     {
-        $pointer = new \CursorPointer($window);
+        $pointer = new CursorPointer($this->cursor_event);
 
-        dump('[DRAW ROW]');
+        dump(__CLASS__ . ': [DRAW]');
 
         /** @var Glyph $child */
         foreach (static::$children as $child) {

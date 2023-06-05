@@ -1,10 +1,10 @@
 <?php
 
-namespace Factory\Kde;
+namespace Factory\Gui;
 
-use Interfaces\Factory\Button;
+use Interfaces\GuiFactory\GuiButton;
 
-class KdeButton implements Button
+class KdeGuiButton implements GuiButton
 {
     public function Press(): void
     {

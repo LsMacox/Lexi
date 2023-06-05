@@ -9,6 +9,7 @@ abstract class Composition extends Glyph
 
     public function Insert(Glyph $glyph, ?int $idx = null): void
     {
+        dump(__CLASS__ . ': [INSERT]');
         $glyph->Insert($glyph, $idx);
         $this->compositor->Compose();
     }

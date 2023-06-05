@@ -8,6 +8,6 @@ class TeXCompositor extends Compositor
 {
     public function Compose(): void
     {
-        dump('[TeX COMPOSITOR]: COMPOSE');
+        dump(__CLASS__ . ': [COMPOSE]');
     }
 }

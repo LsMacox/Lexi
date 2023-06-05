@@ -1,8 +1,8 @@
 <?php
 
-namespace Interfaces\Factory;
+namespace Interfaces\GuiFactory;
 
-interface ScrollBar
+interface GuiScrollBar
 {
     public function ScrollTo(int $to): void;
 }

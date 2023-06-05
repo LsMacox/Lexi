@@ -9,20 +9,18 @@ use Components\Polygon;
 use Components\Row;
 use Compositors\ArrayCompositor;
 use Compositors\SimpleCompositor;
-use Factory\KdeFactory;
+use Factory\KdeGuiFactory;
+use Windows\ApplicationWindow;
 
 // Factory
-$os = 'linux';
+$os = 'kde';
 $gui_factory = null;
-if (str_contains($os, 'linux')) {
-    $gui_factory = new KdeFactory();
+if (str_contains($os, 'kde')) {
+    $gui_factory = new KdeGuiFactory();
 }
+putenv('WINDOW_MANAGER=pm');
 
 // Declarations
-$cursor_event = new CursorEvent();
-$window = $gui_factory->createWindow($cursor_event);
-$cursor_pointer = new CursorPointer($window);
-
 $array_compositor = new ArrayCompositor();
 $simple_compositor = new SimpleCompositor();
 
@@ -38,9 +36,11 @@ $character->Insert($polygon);
 // Initialization
 $row->Insert($character);
 $row->Insert($polygon);
-$row->Draw($window);
+$row->Draw($window = new ApplicationWindow($row));
 
+dump('');
 dump('RERENDER...');
+dump('');
 
 $character->setCompositor($simple_compositor);
 

@@ -1,24 +1,24 @@
 <?php
 
-use Interfaces\Factory\Window;
+use Interfaces\Event;
 use Interfaces\Point;
 
 class CursorPointer implements Point
 {
-    protected Window $window;
+    protected Event $event;
 
-    public function __construct(Window $window)
+    public function __construct(CursorEvent $event)
     {
-        $this->window = $window;
+        $this->event = $event;
     }
 
     public function getCoordinateX(): int
     {
-        return $this->window->getEvent()->getCoordinates()[0];
+        return $this->event->event()[0];
     }
 
     public function getCoordinateY(): int
     {
-        return $this->window->getEvent()->getCoordinates()[1];
+        return $this->event->event()[1];
     }
 }

@@ -2,7 +2,6 @@
 
 namespace Abstractions;
 
-use Interfaces\Factory\Window;
 use Interfaces\Point;
 
 abstract class Glyph

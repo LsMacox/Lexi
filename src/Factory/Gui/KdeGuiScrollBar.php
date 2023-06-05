@@ -1,10 +1,10 @@
 <?php
 
-namespace Factory\Kde;
+namespace Factory\Gui;
 
-use Interfaces\Factory\ScrollBar;
+use Interfaces\GuiFactory\GuiScrollBar;
 
-class KdeScrollBar implements ScrollBar
+class KdeGuiScrollBar implements GuiScrollBar
 {
     public function ScrollTo(int $to): void
     {

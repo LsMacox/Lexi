@@ -1,10 +1,10 @@
 <?php
 
-namespace Factory\Kde;
+namespace Factory\Gui;
 
-use Interfaces\Factory\Menu;
+use Interfaces\GuiFactory\GuiMenu;
 
-class KdeMenu implements Menu
+class KdeGuiMenu implements GuiMenu
 {
     public function Popup(): void
     {

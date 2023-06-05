@@ -3,7 +3,7 @@
 namespace Components\Decorators;
 
 use Abstractions\MonoGlyph;
-use Interfaces\Factory\Window;
+use Abstractions\Window;
 
 class ScrollerDecorator extends MonoGlyph
 {
@@ -15,6 +15,6 @@ class ScrollerDecorator extends MonoGlyph
 
     private function DrawScroll(Window $window): void
     {
-        $window->DrawMessage('[DECORATOR DRAW SCROLL]');
+        $window->DrawText('[DECORATOR DRAW SCROLL]');
     }
 }

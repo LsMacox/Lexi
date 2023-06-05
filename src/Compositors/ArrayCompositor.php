@@ -8,6 +8,6 @@ class ArrayCompositor extends Compositor
 {
     public function Compose(): void
     {
-        dump('[ARRAY COMPOSITOR]: COMPOSE');
+        dump(__CLASS__ . ': [COMPOSE]');
     }
 }

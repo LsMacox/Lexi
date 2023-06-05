@@ -4,14 +4,14 @@ namespace Components;
 
 use Abstractions\Glyph;
 use Abstractions\Rect;
-use Interfaces\Factory\Window;
+use Abstractions\Window;
 use Interfaces\Point;
 
 class Polygon extends Glyph
 {
     public function Draw(Window $window): void
     {
-        dump('[DRAW POLYGON]');
+        dump(__CLASS__ . ': [DRAW]');
         $window->DrawRect(1, 2, 3, 4);
     }
 

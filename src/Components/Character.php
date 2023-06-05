@@ -4,14 +4,15 @@ namespace Components;
 
 use Abstractions\Composition;
 use Abstractions\Rect;
-use Interfaces\Factory\Window;
+use Abstractions\Window;
 use Interfaces\Point;
 
 class Character extends Composition
 {
     public function Draw(Window $window): void
     {
-        $window->DrawCharacter('a');
+        dump(__CLASS__ . ': [DRAW]');
+        $window->DrawText('a');
     }
 
     public function Bounds(Rect $rect): void

@@ -2,16 +2,14 @@
 
 namespace Interfaces;
 
-use Interfaces\Factory\Button;
-use Interfaces\Factory\Menu;
-use Interfaces\Factory\ScrollBar;
-use Interfaces\Factory\Window;
+use Interfaces\GuiFactory\GuiScrollBar;
+use Interfaces\GuiFactory\GuiButton;
+use Interfaces\GuiFactory\GuiMenu;
 
 /* @pattern Factory */
 interface GuiFactory
 {
-    public function createScrollBar(): ScrollBar;
-    public function createButton(): Button;
-    public function createMenu(): Menu;
-    public function createWindow(Event $event): Window;
+    public function createScrollBar(): GuiScrollBar;
+    public function createButton(): GuiButton;
+    public function createMenu(): GuiMenu;
 }

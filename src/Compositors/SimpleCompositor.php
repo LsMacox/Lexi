@@ -8,6 +8,6 @@ class SimpleCompositor extends Compositor
 {
     public function Compose(): void
     {
-        dump('[SIMPLE COMPOSITOR]: COMPOSE');
+        dump(__CLASS__ . ': [COMPOSE]');
     }
 }
